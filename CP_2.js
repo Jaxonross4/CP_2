@@ -61,3 +61,6 @@ function escapeHtml(s) {
   }[c]));
 }
 
+fetchProductsThen();
+fetchProductsAsync();
+
