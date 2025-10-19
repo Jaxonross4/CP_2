@@ -23,3 +23,11 @@ header { margin-bottom: 16px; }
 .card .name { font-size: 14px; margin: 6px 0; }
 .card .price { color: #0a7; font-weight: 600; }
 
+.card {
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);}
+
+  
