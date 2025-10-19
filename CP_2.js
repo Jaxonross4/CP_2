@@ -21,3 +21,13 @@ function handleError(error) {
   console.error("An error occurred:", error?.message || error);
 }
 
+async function fetchProductsAsync() {
+  try {
+    const res = await fetch(API_URL);
+    const data = await res.json();
+    displayProducts(data);
+  } catch (err) {
+    handleError(err);
+  }
+}
+
