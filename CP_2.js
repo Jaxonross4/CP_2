@@ -1,2 +1,19 @@
 const API_URL = "https://www.course-api.com/javascript-store-products";
 const container = document.getElementById("product-container");
+
+function fetchProductsThen() {
+  fetch(API_URL)
+    .then((res) => res.json())
+    .then((data) => {
+      // log each product name
+      data.forEach((p) => {
+        // API shape: p.fields.name (common for this endpoint)
+        const name = p?.fields?.name || "unknown";
+        console.log(name);
+      });
+    })
+    .catch((err) => {
+      console.error("then-fetch failed:", err.message);
+    });
+}
+
