@@ -1,0 +1,8 @@
+* { box-sizing: border-box; }
+body { margin: 24px; font-family: system-ui, Arial, sans-serif; }
+header { margin-bottom: 16px; }
+#product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
